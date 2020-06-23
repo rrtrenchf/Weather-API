@@ -1,0 +1,21 @@
+
+.container {
+   
+    text-align: center;
+    
+    
+}
+.navbar {
+    text-align: center;
+    display: flex;
+}
+.city-search{
+    background-color: antiquewhite;
+}
+.weather-board, .forecast{
+    background-color: antiquewhite;
+}
+.col{
+    width: fit-content;
+    margin: 10px;
+}

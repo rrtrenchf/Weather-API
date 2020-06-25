@@ -6,7 +6,7 @@ $(document).ready(function () {
         var city = $("#city").val()
         
         //queryURL with api key and city variable
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3db0639e571abe86a3c9763857b80ed8&units=imperial"
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3db0639e571abe86a3c9763857b80ed8&units=imperial"
 
         
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
                 var lon = response.coord.lon
 
 
-                var uvqueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=3db0639e571abe86a3c9763857b80ed8&lat=" + lat + "&lon=" + lon
+                var uvqueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=3db0639e571abe86a3c9763857b80ed8&lat=" + lat + "&lon=" + lon
                 
                 return $.ajax({
                     url: uvqueryURL,
@@ -55,8 +55,8 @@ $(document).ready(function () {
                 $("#uv").text("UV index:" + response.value)
 
 
-                var fivedayURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=3db0639e571abe86a3c9763857b80ed8&units=imperial"
-                var iconURL =  "http://openweathermap.org/img/wn/10d@2x.png"
+                var fivedayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=3db0639e571abe86a3c9763857b80ed8&units=imperial"
+                var iconURL =  "https://openweathermap.org/img/wn/10d@2x.png"
                 return $.ajax({
                     url: fivedayURL, iconURL,
                     method: "GET"

@@ -1,65 +1,27 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather API Homework
+## Process
+- Created an HTML file and linked Bootstrap, Jquery, CSS and js files
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+- Created a button click function in the javascript file that would trigger all functions on the page.
 
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
+- Created a variable for city input that would tap into the Open weather API and call the right forecast for the input city
 
-## User Story
+- Used then function to create variables for temp, humidity and wind speed by going through the "main" arry.
+- printed variables on page using ID's in html
+- returned values back out to original function
+- Created another ajax call for UV index because it is in a different URL
+- Created a for loop to loop through the 5 day forecaset
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+## Wasn't able to-
+Get the 5 day forecast on the page
+- I created variables but couldn't get them to populate on the page, May have too many variables. Don't think I used the for loop right. Screen shot provided
 
-## Acceptance Criteria
+Get the icons to show up
+- I  linked the URL and did an ajax call but wasn't sure how to proceed and ran out of time
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-```
+Save to local storage
+- I don't think I had the code in the right place.
 
-The following image demonstrates the application functionality:
-
-![weather dashboard demo](./assets/06-server-side-apis-homework-demo.png)
-
-
-## Check list
-```
-✓ User can search for weather reports by city using the openweathermap API.
-
-✓ After searching for a city, the following information is displayed: current temperature, current humidity, windspeed, uv index, and 5 day forecast.
-
-✓ Application uses icons to represent weather conditions.
-
-✓ Application stores previously searched for cities in local storage and displays them to the user.
-
-✓ Application loads last searched city forecast on page load.
-
-✓ Repository contains quality README with description, screenshot, link to deployed application.
-```
-
-## Submission
-```
-You are required to submit the following for review:
-
-1. The URL of the deployed application.
-
-2. The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-Total of two (2) links.
-```
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+## Links
+- Repo: https://github.com/rrtrenchf/Weather-API
+- Deployed page:https://rrtrenchf.github.io/Weather-API/

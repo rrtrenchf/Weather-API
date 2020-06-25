@@ -1,21 +1,45 @@
 
 .container {
-   
+   height:100%;
     text-align: center;
-    
+    width: 100%;
+    margin: 0;
+    padding: 0;
     
 }
-.navbar {
-    text-align: center;
-    display: flex;
+.navbar{
+    width: 100%;
+    margin: auto, 0;
+    padding: 0
 }
-.city-search{
-    background-color: antiquewhite;
+.navbar-brand {
+    text-align: center;
+    font-size:25px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px;
+
+}
+#city-search{
+    background-color:lightgrey;
+    height:100%;
 }
 .weather-board, .forecast{
-    background-color: antiquewhite;
+    background-color: lightgray;
+    height:100%;
+    margin-top: 10px
 }
 .col{
     width: fit-content;
     margin: 10px;
+}
+#city {
+    font-weight: 700;
+}
+.card {
+    float: left;
+    margin-right: 10px;
+    background-color:rgb(88, 135, 236);
 }

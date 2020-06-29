@@ -25,3 +25,6 @@ Save to local storage
 ## Links
 - Repo: https://github.com/rrtrenchf/Weather-API
 - Deployed page:https://rrtrenchf.github.io/Weather-API/
+
+
+![image](https://github.com/rrtrenchf/Weather-API/blob/master/assets/WeatherAPIscrnShot.png)

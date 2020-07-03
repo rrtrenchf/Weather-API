@@ -1,12 +1,14 @@
+  
 $(document).ready(function () {
     //gave button an ID so when its clicked the function is triggered
     $("#button").on("click", function () {
         event.preventDefault()
         //city input by user
         var city = $("#city").val()
+        localStorage.setItem("City", city)  
         
         //queryURL with api key and city variable
-        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3db0639e571abe86a3c9763857b80ed8&units=imperial"
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=6fcaead496f20955af428e501d122c6f&units=imperial"
 
         
 
@@ -33,7 +35,7 @@ $(document).ready(function () {
                 $("#hum").text("Humidity:" + hum)
                 $("#windSpeed").text("Wind Speed:" + windspeed)
                 $("#cityboard").text(city)
-                $("#fiveday").append(div)
+                // $("#fiveday").append(div)
 
 
 
@@ -42,7 +44,7 @@ $(document).ready(function () {
                 var lon = response.coord.lon
 
 
-                var uvqueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=3db0639e571abe86a3c9763857b80ed8&lat=" + lat + "&lon=" + lon
+                var uvqueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=6fcaead496f20955af428e501d122c6f&lat=" + lat + "&lon=" + lon
                 
                 return $.ajax({
                     url: uvqueryURL,
@@ -55,10 +57,10 @@ $(document).ready(function () {
                 $("#uv").text("UV index:" + response.value)
 
 
-                var fivedayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=3db0639e571abe86a3c9763857b80ed8&units=imperial"
-                var iconURL =  "https://openweathermap.org/img/wn/10d@2x.png"
+                var fivedayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=6fcaead496f20955af428e501d122c6f&units=imperial"
+                // var iconURL =  "https://openweathermap.org/img/wn/10d@2x.png"
                 return $.ajax({
-                    url: fivedayURL, iconURL,
+                    url: fivedayURL, 
                     method: "GET"
 
 
@@ -69,32 +71,37 @@ $(document).ready(function () {
             
             //for loop to go through the 5 day forecast. Each day an index stored in a variable.
             .then(function (response) {
-                console.log(response)
-                for (i = 0; i < response.list.length; i++) {
-                    var currentDay = response.list[0]
-                    var daytwo = response.list[8]
-                    var daythree = response.list[16]
-                    var dayfour = response.list[24]
-                    var dayfive = response.list[32]
-                    response.list[i]
-                    var div = $("<div>")
-                    var tempel = $("<p>")
-                    tempel.text()
-                    if (i = 0, 8, 16, 24, 32) {
-                        // $("#fiveday").append(div)
-                        $("#daytwo").text(daytwo)
-                        $("#daythree").text(daythree)
-                        $("#dayfour").text(dayfour)
-                        $("#dayfive").text(dayfive)
+                // console.log(response)
+                for (i = 8; i < response.list.length; i+=8) {
+                    console.log(response.list[i])
+                    
+                
+                    // var currentDay = response.list[0]
+                    // var daytwo = response.list[8]
+                    // var daythree = response.list[16]
+                    // var dayfour = response.list[24]
+                    // var dayfive = response.list[32]
+                    // response.list[i]
+                    // var div = $("<div>")
+                    // var tempel = $("<p>")
+                    // tempel.text()
+                    // if (i = 0, 8, 16, 24, 32) {
+                    //     // $("#fiveday").append(div)
+                    //     $("#daytwo").text(daytwo)
+                    //     $("#daythree").text(daythree)
+                    //     $("#dayfour").text(dayfour)
+                    //     $("#dayfive").text(dayfive)
                       
 
 
 
 
-                    }
+                    // }
 
                 }
+                
 
-                localStorage.setItem(input.attr("id"),$("#city").val())  })
+                
+            })
     })
 })
